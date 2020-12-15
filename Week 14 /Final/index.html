@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATH NonProfit</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="flex">
+            <a href="index.html"><img src="./images/pathlogo.png" alt="Path Logo" class="logo"></a>
+            <ul class="flex">
+                <li class="order-1, order-lg-1"><a href="about.html">About</a></li>
+                <li class="order-2, order-lg-2"><a href="donation.html">Donate</a></li>
+                <li class="order-3, order-lg-3"><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+        
+        <main> 
+            <h1>Our Mission</h1>
+        <p> PATH is ending homelessness for individuals, families, and communities. We do this by building affordable housing and providing supportive services throughout California. <br> <br>10,000 TOTAL PEOPLE HAVE MADE IT HOME IN MORE THAN 140 CITIES.<br> <br> We are striving to increase that number EVERY SINGLE DAY! </p>
+
+            <h2>Serving the 6 Largest Areas in California</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="./images/losangeles2.jpg" style="width:100%">
+              <div class="text">Los Angeles</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="./images/santabarb2.jpg" style="width:100%">
+              <div class="text">Santa Barbara</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="./images/san-jose-banner.jpg" style="width:100%">
+              <div class="text">San Jose</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="./images/sandiego.jpg" style="width:100%">
+                <div class="text">San Diego</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="./images/sacramento2.jpg" style="width:100%">
+                <div class="text">Sacramento</div>
+              </div>
+            
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="./images/orangecounty2.jpg" style="width:100%">
+                <div class="text">Orange County</div>
+              </div>
+            
+            
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            
+      </main>         
+    
+</body>
+</html>
